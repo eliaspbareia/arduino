@@ -183,12 +183,3 @@ void menu5(){
   }
   delay(50);
 }
-
-void grava_na_eeprom(float x, int p){
-  EEPROM.write(p, int(x));
-  EEPROM.write(p+1, int((x-int(x))*100));
-}
-
-float le_na_eeprom(int p){
-  return float(EEPROM.read(p))+float(EEPROM.read(p+1))/100;
-}
